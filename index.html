@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -30,13 +29,7 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--text); }
     .site { max-width: 1100px; margin: 0 auto; }
-
-    /* NAV */
-    nav {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.25rem 2rem; border-bottom: 1px solid var(--border);
-      background: var(--white); position: sticky; top: 0; z-index: 100;
-    }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 2rem; border-bottom: 1px solid var(--border); background: var(--white); position: sticky; top: 0; z-index: 100; }
     .nav-logo { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 400; color: var(--navy); letter-spacing: -0.3px; text-decoration: none; }
     .nav-logo span { color: var(--green-mid); }
     .nav-links { display: flex; gap: 1.5rem; align-items: center; }
@@ -49,8 +42,6 @@
     .nav-mobile a { font-size: 15px; color: var(--text-muted); text-decoration: none; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
     .nav-mobile a:last-child { border-bottom: none; color: var(--navy); font-weight: 500; }
     .nav-mobile.open { display: flex; }
-
-    /* HERO */
     .hero { padding: 5rem 2rem 4rem; background: linear-gradient(160deg, var(--sand) 0%, var(--white) 60%); border-bottom: 1px solid var(--border); }
     .hero-tag { display: inline-block; background: var(--green-light); color: var(--green); font-size: 11px; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; margin-bottom: 1.5rem; }
     .hero h1 { font-family: 'Fraunces', serif; font-size: 56px; font-weight: 300; line-height: 1.1; color: var(--navy); letter-spacing: -2px; max-width: 680px; margin-bottom: 1.25rem; }
@@ -65,22 +56,16 @@
     .stamp { display: flex; align-items: center; gap: 8px; }
     .stamp-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green-mid); flex-shrink: 0; }
     .stamp span { font-size: 13px; color: var(--text-muted); }
-
-    /* SECTIONS */
     section { padding: 5rem 2rem; }
     .section-label { font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem; }
     .section-title { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 300; color: var(--navy); letter-spacing: -1px; line-height: 1.2; margin-bottom: 1rem; }
     .section-body { font-size: 16px; color: var(--text-muted); line-height: 1.75; max-width: 520px; }
-
-    /* PROBLEMEN */
     .problemen { background: var(--sand); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .prob-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
     .prob-card { background: var(--white); border-radius: 12px; padding: 1.75rem; border: 1px solid var(--border); }
     .prob-icon { width: 42px; height: 42px; border-radius: 10px; background: var(--sand); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 20px; color: var(--navy); }
     .prob-card h3 { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
     .prob-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
-
-    /* OPLOSSING */
     .oplossing { background: var(--navy); }
     .oplossing .section-label { color: #97C459; }
     .oplossing .section-title { color: white; }
@@ -90,8 +75,6 @@
     .opl-num { min-width: 28px; height: 28px; background: var(--green-mid); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; margin-top: 2px; flex-shrink: 0; }
     .opl-item h4 { font-size: 14px; font-weight: 500; color: white; margin-bottom: 4px; }
     .opl-item p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
-
-    /* STAPPEN */
     .stappen { background: var(--white); border-bottom: 1px solid var(--border); }
     .stap-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 2.5rem; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
     .stap { padding: 1.75rem 1.5rem; border-right: 1px solid var(--border); }
@@ -99,8 +82,6 @@
     .stap-n { font-family: 'Fraunces', serif; font-size: 40px; color: var(--sand-dark); font-weight: 300; line-height: 1; margin-bottom: 0.75rem; }
     .stap h4 { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 0.4rem; }
     .stap p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-
-    /* DIENSTEN */
     .diensten { background: var(--sand); border-bottom: 1px solid var(--border); }
     .dienst-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 2rem; }
     .dienst-card { background: var(--white); border-radius: 12px; padding: 1.75rem; border: 1px solid var(--border); }
@@ -108,16 +89,12 @@
     .dienst-card h4 { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
     .dienst-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
     .dienst-result { font-size: 11px; color: var(--green); font-weight: 500; margin-top: 1rem; letter-spacing: 0.3px; }
-
-    /* VOOR WIE */
     .voorwie { background: var(--white); }
     .wie-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 2rem; }
     .wie-card { padding: 1.75rem; border-radius: 12px; border: 1.5px solid var(--border); }
     .wie-badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 4px 12px; border-radius: 20px; margin-bottom: 0.75rem; }
     .wie-card h4 { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
     .wie-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
-
-    /* WERKGEBIED */
     .werkgebied { background: var(--sand); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .werkgebied-inner { display: flex; align-items: center; gap: 3rem; flex-wrap: wrap; }
     .werkgebied-text { flex: 1; min-width: 260px; }
@@ -125,15 +102,15 @@
     .werkgebied-kaart i { font-size: 32px; color: var(--green-mid); }
     .werkgebied-kaart h4 { font-size: 15px; font-weight: 500; color: var(--navy); }
     .werkgebied-kaart p { font-size: 13px; color: var(--text-muted); }
-
-    /* OVER */
     .over { background: var(--white); border-bottom: 1px solid var(--border); }
     .over-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    .over blockquote { font-family: 'Fraunces', serif; font-style: italic; font-size: 24px; font-weight: 300; color: var(--navy); line-height: 1.45; letter-spacing: -0.3px; }
-    .over-text p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.85rem; }
+    .over-foto { width: 100%; border-radius: 16px; object-fit: cover; aspect-ratio: 3/4; max-height: 480px; }
+    .over-content { display: flex; flex-direction: column; gap: 1.25rem; }
+    .over blockquote { font-family: 'Fraunces', serif; font-style: italic; font-size: 22px; font-weight: 300; color: var(--navy); line-height: 1.5; letter-spacing: -0.3px; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
+    .over-text p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 0.75rem; }
     .over-text strong { color: var(--navy); font-weight: 500; }
-
-    /* CONTACT */
+    .over-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.5rem; }
+    .over-tag { font-size: 12px; color: var(--green); background: var(--green-light); padding: 4px 12px; border-radius: 20px; font-weight: 500; }
     .contact-slot { background: var(--navy); padding: 5rem 2rem; }
     .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; max-width: 900px; }
     .contact-left h2 { font-family: 'Fraunces', serif; font-size: 38px; font-weight: 300; color: white; letter-spacing: -1px; margin-bottom: 1rem; line-height: 1.2; }
@@ -152,12 +129,8 @@
     .kvk-row:last-child { border-bottom: none; padding-bottom: 0; }
     .kvk-row span:first-child { color: rgba(255,255,255,0.45); }
     .kvk-row span:last-child { color: rgba(255,255,255,0.8); font-weight: 500; }
-
-    /* WHATSAPP FLOAT */
     .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; background: var(--whatsapp); color: white; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; text-decoration: none; box-shadow: 0 4px 12px rgba(37,211,102,0.4); transition: transform 0.2s; }
     .whatsapp-float:hover { transform: scale(1.08); }
-
-    /* FOOTER */
     footer { padding: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     .footer-logo { font-family: 'Fraunces', serif; font-size: 16px; color: var(--navy); text-decoration: none; }
     .footer-logo span { color: var(--green-mid); }
@@ -165,8 +138,6 @@
     .footer-links a { font-size: 12px; color: var(--text-muted); text-decoration: none; }
     .footer-links a:hover { color: var(--navy); }
     footer p { font-size: 12px; color: var(--text-muted); }
-
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero h1 { font-size: 38px; letter-spacing: -1px; }
       .section-title { font-size: 28px; }
@@ -174,6 +145,7 @@
       .stap:nth-child(2) { border-right: none; }
       .stap:nth-child(1), .stap:nth-child(2) { border-bottom: 1px solid var(--border); }
       .over-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .over-foto { max-height: 320px; width: 100%; }
       .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
       .nav-links { display: none; }
       .nav-hamburger { display: block; }
@@ -191,10 +163,7 @@
   </style>
 </head>
 <body>
-
 <div class="site">
-
-  <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">Thuis<span>brein</span></a>
     <div class="nav-links">
@@ -215,8 +184,6 @@
     <a href="#over">Over mij</a>
     <a href="#contact">Plan kennismaking</a>
   </div>
-
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-tag">Comfort · Energie · Sturing</div>
     <h1>Alles in huis<br>verbonden. <em>Eén app.</em></h1>
@@ -231,8 +198,6 @@
       <div class="stamp"><div class="stamp-dot"></div><span>Actief door heel Nederland</span></div>
     </div>
   </div>
-
-  <!-- PROBLEMEN -->
   <section class="problemen">
     <div class="section-label">Herkenbaar?</div>
     <div class="section-title">Veel woningen zijn slimmer<br>te maken dan mensen denken.</div>
@@ -254,29 +219,16 @@
       </div>
     </div>
   </section>
-
-  <!-- OPLOSSING -->
   <section class="oplossing">
     <div class="section-label">De oplossing</div>
     <div class="section-title">Eén slim systeem<br>dat samenwerkt.</div>
     <p class="section-body">Ik combineer verwarming, energie-inzicht en slimme automatisering tot één logisch geheel — met comfort, besparing en gebruiksgemak als uitgangspunt.</p>
     <div class="opl-list">
-      <div class="opl-item">
-        <div class="opl-num">1</div>
-        <div><h4>Centrale woningcomputer</h4><p>Eén systeem (Home Assistant) als brein van je woning — lokaal, open en uitbreidbaar.</p></div>
-      </div>
-      <div class="opl-item">
-        <div class="opl-num">2</div>
-        <div><h4>Alle systemen verbonden</h4><p>Verwarming, airco, zonnepanelen, energiemeter en slimme apparaten communiceren met elkaar.</p></div>
-      </div>
-      <div class="opl-item">
-        <div class="opl-num">3</div>
-        <div><h4>Eén app — klaar</h4><p>Je bedient alles via één overzichtelijke interface. Geen losse apps, geen handmatige instellingen.</p></div>
-      </div>
+      <div class="opl-item"><div class="opl-num">1</div><div><h4>Centrale woningcomputer</h4><p>Eén systeem (Home Assistant) als brein van je woning — lokaal, open en uitbreidbaar.</p></div></div>
+      <div class="opl-item"><div class="opl-num">2</div><div><h4>Alle systemen verbonden</h4><p>Verwarming, airco, zonnepanelen, energiemeter en slimme apparaten communiceren met elkaar.</p></div></div>
+      <div class="opl-item"><div class="opl-num">3</div><div><h4>Eén app — klaar</h4><p>Je bedient alles via één overzichtelijke interface. Geen losse apps, geen handmatige instellingen.</p></div></div>
     </div>
   </section>
-
-  <!-- STAPPEN -->
   <section class="stappen" id="hoe-het-werkt">
     <div class="section-label">Hoe het werkt</div>
     <div class="section-title">Van kennismaking<br>tot slimme woning.</div>
@@ -287,8 +239,6 @@
       <div class="stap"><div class="stap-n">04</div><h4>Doorontwikkelen</h4><p>Je woning kan altijd uitgebreid worden met nieuwe functies.</p></div>
     </div>
   </section>
-
-  <!-- DIENSTEN -->
   <section class="diensten" id="diensten">
     <div class="section-label">Diensten</div>
     <div class="section-title">Wat ik doe.</div>
@@ -301,8 +251,6 @@
       <div class="dienst-card"><div class="dienst-dot" style="background:#5F6E7A;"></div><h4>Uitbreiding</h4><p>Nieuwe apparaten, functies of automatiseringen toevoegen aan bestaand systeem.</p><div class="dienst-result">→ Je woning blijft één geheel</div></div>
     </div>
   </section>
-
-  <!-- VOOR WIE -->
   <section class="voorwie">
     <div class="section-label">Voor wie</div>
     <div class="section-title">Voor woningen die klaar<br>willen zijn voor de toekomst.</div>
@@ -312,8 +260,6 @@
       <div class="wie-card"><span class="wie-badge" style="background:#1A2B3C; color:white;">Volledig slim</span><h4>Geavanceerde automatisering</h4><p>Integratie, automatisering en toekomstige uitbreidingen.</p></div>
     </div>
   </section>
-
-  <!-- WERKGEBIED -->
   <section class="werkgebied">
     <div class="werkgebied-inner">
       <div class="werkgebied-text">
@@ -323,27 +269,31 @@
       </div>
       <div class="werkgebied-kaart">
         <i class="ti ti-map-pin" aria-hidden="true"></i>
-        <div>
-          <h4>Heel Nederland</h4>
-          <p>Reiskosten worden besproken bij de intake</p>
+        <div><h4>Heel Nederland</h4><p>Reiskosten worden besproken bij de intake</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="over" id="over">
+    <div class="over-inner">
+      <img src="thomas.jpg" alt="Thomas Branderhorst — Thuisbrein" class="over-foto">
+      <div class="over-content">
+        <blockquote>"Een woning hoort niet uit losse systemen te bestaan. Het hoort één geheel te zijn."</blockquote>
+        <div class="over-text">
+          <p>Ik kom niet uit de klassieke IT-hoek. Mijn achtergrond ligt in de hospitality — als hotelmanager was ik verantwoordelijk voor alles wat een gebouw draaiende houdt. Van energiebeheer en systeembeheer tot het oplossen van technische problemen midden in de nacht. Dat heeft me geleerd hoe technologie in de praktijk werkt — en waar het vaak mis gaat.</p>
+          <p>Momenteel werk ik ook voor <strong>GuestCompass</strong>, een gasten-webapp waarmee hotels domotica aansturen, deuren openen en gasten alles vanuit één app laten regelen. Precies het concept dat ik naar woningen breng.</p>
+          <p>Die combinatie van technische kennis en menselijke aanpak neem ik mee naar elk huis. Ik ben geen IT-nerd die dashboards bouwt om dashboards te bouwen. Ik kijk naar wat jij nodig hebt — en zorg dat het gewoon werkt.</p>
+          <p><strong>Thomas Branderhorst</strong> — Thuisbrein</p>
+        </div>
+        <div class="over-tags">
+          <span class="over-tag">Hospitality &amp; technologie</span>
+          <span class="over-tag">Energiebeheer</span>
+          <span class="over-tag">Domotica</span>
+          <span class="over-tag">Systeembeheer</span>
+          <span class="over-tag">Home Assistant</span>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- OVER -->
-  <section class="over" id="over">
-    <div class="over-inner">
-      <blockquote>"Een woning hoort niet uit losse systemen te bestaan. Het hoort één geheel te zijn."</blockquote>
-      <div class="over-text">
-        <p>Vanuit interesse in slimme woningen, energie en automatisering ontstond het idee om woningen écht beter te laten samenwerken.</p>
-        <p>Niet met technologie als doel op zich, maar met <strong>comfort, overzicht en energiebesparing</strong> als uitgangspunt.</p>
-        <p><strong>Thomas Branderhorst</strong> — Thuisbrein</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
   <div class="contact-slot" id="contact">
     <div class="contact-inner">
       <div class="contact-left">
@@ -363,7 +313,6 @@
         <h3>Bedrijfsgegevens</h3>
         <div class="contact-kvk">
           <div class="kvk-row"><span>Handelsnaam</span><span>Thomas Branderhorst</span></div>
-          
           <div class="kvk-row"><span>KVK</span><span>88372952</span></div>
           <div class="kvk-row"><span>BTW</span><span>NL004593743B17</span></div>
           <div class="kvk-row"><span>Werkgebied</span><span>Heel Nederland</span></div>
@@ -371,8 +320,6 @@
       </div>
     </div>
   </div>
-
-  <!-- FOOTER -->
   <footer>
     <a href="index.html" class="footer-logo">Thuis<span>brein</span> — Thomas Branderhorst</a>
     <div class="footer-links">
@@ -381,24 +328,15 @@
     </div>
     <p>KVK 88372952 · Heel Nederland</p>
   </footer>
-
 </div>
-
-<!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/31654157920?text=Hallo%20Thomas%2C%20ik%20ben%20benieuwd%20wat%20Thuisbrein%20voor%20mijn%20woning%20kan%20doen." class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
   <i class="ti ti-brand-whatsapp"></i>
 </a>
-
 <script>
   const hamburger = document.getElementById('hamburger');
   const navMobile = document.getElementById('nav-mobile');
-  hamburger.addEventListener('click', () => {
-    navMobile.classList.toggle('open');
-  });
-  navMobile.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => navMobile.classList.remove('open'));
-  });
+  hamburger.addEventListener('click', () => { navMobile.classList.toggle('open'); });
+  navMobile.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => navMobile.classList.remove('open')); });
 </script>
-
 </body>
-</html>
+  </html>
