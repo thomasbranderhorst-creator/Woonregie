@@ -206,6 +206,19 @@ section { padding: 3.5rem 1.25rem; }
 footer { flex-direction: column; align-items: flex-start; }
 .opl-item { grid-template-columns: 44px 1fr; gap: 0 1rem; }
 }
+
+.faq { background: var(--white); border-bottom: 1px solid var(--border); }
+.faq-list { margin-top: 2.5rem; max-width: 720px; }
+.faq-item { border-top: 0.5px solid var(--border); }
+.faq-item:last-child { border-bottom: 0.5px solid var(--border); }
+.faq-vraag { width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 0; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; color: var(--navy); text-align: left; gap: 1rem; }
+.faq-vraag i { font-size: 18px; color: var(--text-muted); flex-shrink: 0; transition: transform 0.25s; }
+.faq-vraag[aria-expanded="true"] i { transform: rotate(180deg); }
+.faq-antwoord { display: none; padding-bottom: 1.25rem; }
+.faq-antwoord.open { display: block; }
+.faq-antwoord p { font-size: 14px; color: var(--text-muted); line-height: 1.75; }
+.faq-antwoord a { color: var(--green); text-decoration: none; font-weight: 500; }
+.faq-antwoord a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -367,6 +380,48 @@ footer { flex-direction: column; align-items: flex-start; }
 </div>
 </div>
 </section>
+<section class="faq" id="faq">
+<div class="section-label">Veelgestelde vragen</div>
+<div class="section-title">Wat mensen vaak<br>willen weten.</div>
+<div class="faq-list">
+
+<div class="faq-item">
+<button class="faq-vraag" aria-expanded="false">Wat gebeurt er tijdens de intake?<i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+<div class="faq-antwoord"><p>Ik kom bij je thuis voor een gesprek van ongeveer een uur. We kijken samen naar je huidige situatie: welke apparaten je hebt, wat je ervan vindt, en wat je zou willen verbeteren. Op basis daarvan maak ik een concreet advies — wat er mogelijk is, wat het kost, en wat de slimste volgorde is.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-vraag" aria-expanded="false">Moet ik mijn huis verbouwen voor een slim systeem?<i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+<div class="faq-antwoord"><p>Nee. In de meeste gevallen werk ik met wat er al is. Bestaande apparaten, leidingen en bekabeling blijven gewoon zitten. Een slim systeem voeg ik toe als een extra laag — zonder grote ingrepen. Soms is één nieuw apparaatje, zoals een slimme thermostaat, al genoeg om een groot verschil te maken.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-vraag" aria-expanded="false">Werkt dit ook met mijn bestaande thermostaat of cv-ketel?<i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+<div class="faq-antwoord"><p>Dat hangt af van het merk en model, maar in veel gevallen: ja. Tijdens de intake kijk ik wat compatibel is. Als vervanging nodig is, adviseer ik een product dat goed past bij jouw situatie en installeer ik het meteen.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-vraag" aria-expanded="false">Welk systeem installeer je — en waarom?<i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+<div class="faq-antwoord"><p>Ik ben merkonafhankelijk. Het systeem dat het beste past bij jouw woning, wensen en budget bepalen we samen. Ik adviseer op basis van wat voor jou werkt — niet op basis van één merk of leverancier.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-vraag" aria-expanded="false">Wat kost een intake?<i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+<div class="faq-antwoord"><p>De intake is onderdeel van het traject. Bekijk de <a href="pricing.html">prijzenpagina</a> voor een overzicht, of neem gewoon contact op — ik leg het graag persoonlijk uit.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-vraag" aria-expanded="false">Kom je ook buiten midden en zuidoost Nederland?<i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+<div class="faq-antwoord"><p>Mijn focus ligt op midden en zuidoost Nederland. Twijfel je of ik bij jou in de buurt kom? Neem gerust contact op — in overleg is er vaak meer mogelijk.</p></div>
+</div>
+
+<div class="faq-item">
+<button class="faq-vraag" aria-expanded="false">Wat als er later iets stuk gaat of ik iets wil uitbreiden?<i class="ti ti-chevron-down" aria-hidden="true"></i></button>
+<div class="faq-antwoord"><p>Ik blijf bereikbaar na de installatie. Wil je later iets toevoegen of aanpassen, dan is dat altijd mogelijk. Je Thuisbrein is opgebouwd om mee te groeien met wat jij nodig hebt.</p></div>
+</div>
+
+</div>
+</section>
 <div class="contact-slot" id="contact">
 <div class="contact-inner">
 <div class="contact-left">
@@ -410,9 +465,19 @@ const hamburger = document.getElementById('hamburger');
 const navMobile = document.getElementById('nav-mobile');
 hamburger.addEventListener('click', () => { navMobile.classList.toggle('open'); });
 navMobile.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => navMobile.classList.remove('open')); });
+
+document.querySelectorAll('.faq-vraag').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const antwoord = btn.nextElementSibling;
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-vraag').forEach(b => { b.setAttribute('aria-expanded','false'); b.nextElementSibling.classList.remove('open'); });
+    if (!isOpen) { btn.setAttribute('aria-expanded','true'); antwoord.classList.add('open'); }
+  });
+});
 </script>
 </body>
 </html>
+
 
 
 
